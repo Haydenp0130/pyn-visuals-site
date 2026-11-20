@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a Shoot | Pyn Visuals</title>
+  <meta name="description" content="Send a booking inquiry to Pyn Visuals for sports, lacrosse, business, or custom photo and video projects in Kennewick, the Tri-Cities, or on location." />
+  <meta name="theme-color" content="#f4f2ee" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <meta property="og:site_name" content="Pyn Visuals" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Book a Shoot | Pyn Visuals" />
+  <meta property="og:description" content="Send a booking inquiry for sports, lacrosse, business, or custom photo and video projects." />
+  <meta property="og:image" content="assets/social/og-image.jpg" />
+  <meta property="og:image:alt" content="Pyn Visuals logo and name on a warm white background." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="js/config.js" defer></script>
+  <script src="js/components.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/inquiry-form.js" defer></script>
+</head>
+<body>
+  <site-header current="contact"></site-header>
+  <noscript><nav class="container" aria-label="Main"><p><a href="index.html">Home</a> · <a href="portfolio.html">Work</a> · <a href="services.html">Services</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p></nav></noscript>
+
+  <main id="main">
+    <header class="container page-intro">
+      <p class="eyebrow">Booking inquiry</p>
+      <div class="page-intro__row">
+        <h1 class="display">Book a shoot</h1>
+        <p class="lede">Tell us about your game, event, or project. You'll hear back to talk through details, availability, and a custom quote.</p>
+      </div>
+    </header>
+
+    <section class="container contact-grid" aria-label="Inquiry form and contact details" style="padding-bottom:var(--section)">
+      <div>
+        <noscript><p class="notice" style="display:block">The inquiry form needs JavaScript. Please call or text <a href="tel:+15095727469">509-572-7469</a> or message <a href="https://www.instagram.com/pynvisuals/">@pynvisuals</a> on Instagram.</p></noscript>
+
+        <!--
+          NOTE: No backend. This form only delivers messages after you set
+          PYN.inquiryForm.endpoint in js/config.js (see README.md).
+          Field names below are what your form service will receive.
+        -->
+        <form class="form" data-inquiry-form novalidate>
+          <p class="notice notice--setup" data-setup-notice hidden>
+            <strong>Setup needed (only shown while previewing locally)</strong>
+            This form isn't connected to an email or form service yet, so submissions are not sent. Add your endpoint in <code>js/config.js</code> &rarr; <code>inquiryForm.endpoint</code>.
+          </p>
+          <div class="notice notice--error" data-error-summary tabindex="-1" hidden></div>
+
+          <div class="field">
+            <label for="name">Name <span class="req">(required)</span></label>
+            <input class="input" id="name" name="name" type="text" autocomplete="name" required aria-describedby="name-error" />
+            <p class="field__error" id="name-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="email">Email <span class="req">(required)</span></label>
+            <input class="input" id="email" name="email" type="email" autocomplete="email" inputmode="email" required aria-describedby="email-error" />
+            <p class="field__error" id="email-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone <span class="req">(optional)</span></label>
+            <input class="input" id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" aria-describedby="phone-error" />
+            <p class="field__error" id="phone-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="organization">Organization <span class="req">(optional)</span></label>
+            <input class="input" id="organization" name="organization" type="text" autocomplete="organization" aria-describedby="organization-hint" />
+            <p class="hint" id="organization-hint">Team, club, school, or business.</p>
+          </div>
+
+          <div class="field">
+            <label for="project-type">Project type <span class="req">(required)</span></label>
+            <select class="input" id="project-type" name="projectType" required aria-describedby="project-type-error">
+              <option value="">Choose one</option>
+              <!-- options come from js/config.js (projectTypes) -->
+            </select>
+            <p class="field__error" id="project-type-error"></p>
+          </div>
+
+          <div class="field">
+            <label for="location">Location <span class="req">(optional)</span></label>
+            <input class="input" id="location" name="location" type="text" autocomplete="off" aria-describedby="location-hint" />
+            <p class="hint" id="location-hint">City, venue, or field.</p>
+          </div>
+
+          <fieldset class="field field--full" style="border:0;margin:0;padding:0;min-width:0">
+            <legend>Project date or date range <span class="req">(optional)</span></legend>
+            <p class="hint" id="date-hint" style="margin:0.5rem 0 0.75rem">Leave blank if you're not sure yet. For a single day, fill in the start date only.</p>
+            <div class="date-range">
+              <div>
+                <label class="sub" for="date-start">Start</label>
+                <input class="input" id="date-start" name="dateStart" type="date" aria-describedby="date-hint" />
+              </div>
+              <div>
+                <label class="sub" for="date-end">End</label>
+                <input class="input" id="date-end" name="dateEnd" type="date" aria-describedby="date-end-error" />
+              </div>
+            </div>
+            <p class="field__error" id="date-end-error"></p>
+          </fieldset>
+
+          <div class="field field--full">
+            <label for="details">Project details <span class="req">(required)</span></label>
+            <textarea class="input" id="details" name="details" required aria-describedby="details-hint details-error"></textarea>
+            <p class="hint" id="details-hint">What's the event or project, what do you want captured (photo, video, or both), and how will you use it?</p>
+            <p class="field__error" id="details-error"></p>
+          </div>
+
+          <!-- Spam trap: hidden from people, often filled by bots -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="gotcha">Leave this field empty</label>
+            <input id="gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <p class="notice notice--error field--full" data-send-error tabindex="-1" hidden></p>
+
+          <div class="form__foot">
+            <button class="btn" type="submit">Send Inquiry</button>
+            <p class="form__note">Sending an inquiry doesn't confirm a booking. Dates are only reserved once confirmed directly with you.</p>
+          </div>
+        </form>
+
+        <div class="form-result" data-form-result aria-live="polite" hidden></div>
+      </div>
+
+      <aside class="dark contact-card" aria-labelledby="direct-title">
+        <h2 class="eyebrow" id="direct-title">Reach out directly</h2>
+        <dl>
+          <div><dt>Call or text</dt><dd><a data-link="phone" href="tel:+15095727469">509-572-7469</a></dd></div>
+          <div><dt>Instagram</dt><dd><a data-link="instagram" href="https://www.instagram.com/pynvisuals/" target="_blank" rel="noopener">@pynvisuals</a></dd></div>
+          <div><dt>Based in</dt><dd>Kennewick, WA</dd></div>
+          <div><dt>Service area</dt><dd>Tri-Cities + travel</dd></div>
+        </dl>
+        <p class="disclaimer">Pricing is custom for every project. Submitting an inquiry does not confirm a booking.</p>
+      </aside>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+</body>
+</html>
