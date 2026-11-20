@@ -95,7 +95,7 @@ Remaining placeholders (clearly labeled) and how to replace them:
 | **Home hero video (optional)** | Put a short muted MP4 in `assets/video/` and set `hero.video` in `js/config.js`. It's skipped for visitors who prefer reduced motion. |
 | **"Selected work" on Home** | Set `featured: true` on up to 3 portfolio items in `js/config.js`. |
 | **Services page images** | `image` / `imageAlt` on each service in `js/config.js`. |
-| **About photo** | Replace `assets/images/about/about.jpg` (4:5 works best), update its `alt`, and delete the `<span class="tag">Placeholder</span>` line in `about.html`. |
+| **About photo & bio** | Photo: `assets/images/about/hayden-pyne.jpg` (portrait works best; update the `alt` in `about.html` if you swap it). Bio text is in `about.html`. Your age ("20-year-old") is written there too, so update it each year. |
 | **Vector logo (optional)** | If you get an SVG version, put it in `assets/brand/` and change `logo.src` in `js/config.js`. |
 
 **Image tips:** export JPG or WebP at roughly 2000px on the long edge and 200–500 KB each. Write `alt` text that describes what's actually in the photo.
