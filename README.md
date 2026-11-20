@@ -45,8 +45,11 @@ Any static host works. Upload the whole folder:
 - **GitHub Pages:** push this folder to a repo (GitHub Desktop works), then Settings → Pages → deploy from branch.
 - **Cloudflare Pages / Vercel:** "static site", no build command, output folder = root.
 
-After it's live, update `og:image` in the `<head>` of each page to the full URL
-(e.g. `https://yourdomain.com/assets/social/og-image.jpg`) so link previews show on social apps.
+**Live site:** https://haydenp0130.github.io/pyn-visuals-site/ (GitHub Pages, from the `main` branch of
+https://github.com/Haydenp0130/pyn-visuals-site). To update it: commit and push in GitHub Desktop.
+
+If you move to a custom domain, update `og:url` and `og:image` in the `<head>` of each page to the new address
+so link previews keep working on social apps.
 
 ## Connect the inquiry form (required before launch)
 
