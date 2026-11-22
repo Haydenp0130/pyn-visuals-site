@@ -8,6 +8,7 @@ pyn-visuals-site/
 ├─ portfolio.html      Filterable gallery + photo/video lightbox
 ├─ services.html       Service details, how booking works, pricing note
 ├─ web-design.html     Web design & marketing (its own tab, separate from photo/video services)
+├─ examples/          Concept websites shown in the Web Design carousel (fictional businesses, noindex)
 ├─ about.html          About Pyn Visuals
 ├─ contact.html        Booking inquiry form + direct contact
 ├─ reviews.html        Reviews panel + "Leave a review" form
