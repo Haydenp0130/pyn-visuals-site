@@ -49,7 +49,7 @@
             <a class="brand" href="index.html" aria-label="${esc(b.name)}, home">${brandMarkup(true)}</a>
             <nav class="nav" aria-label="Main">
               <ul class="nav__list">${navLinks}</ul>
-              <a class="btn btn--sm" href="contact.html">Contact Us</a>
+              <a class="btn btn--sm" href="contact.html">Get a Quote</a>
             </nav>
             <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">
               <span class="menu-toggle__label">Menu</span><span class="menu-toggle__icon" aria-hidden="true"></span>
@@ -61,7 +61,7 @@
             <ul class="mobile-menu__list">${mobileLinks}</ul>
           </nav>
           <div class="mobile-menu__foot">
-            <a class="btn" href="contact.html">Contact Us</a>
+            <a class="btn" href="contact.html">Get a Quote</a>
             <div class="mobile-menu__contact mono">
               <a href="tel:${esc(b.phoneHref)}">${esc(b.phoneDisplay)}</a>
               <a href="${esc(b.instagramUrl)}" target="_blank" rel="noopener">Instagram ${esc(b.instagramHandle)}</a>
