@@ -10,7 +10,7 @@ tags:
   - ai-context
   - obsidian
 source: https://github.com/Haydenp0130/pyn-visuals-site
-live_site: https://haydenp0130.github.io/pyn-visuals-site/
+live_site: https://pynvisuals.com/
 last_reviewed: 2026-11-21
 ---
 
@@ -29,7 +29,7 @@ last_reviewed: 2026-11-21
 **Other work:** Athlete and team highlights, business promotional content, social media video, creative and custom photo/video projects  
 **Phone:** 509-572-7469  
 **Instagram:** [@pynvisuals](https://www.instagram.com/pynvisuals/)  
-**Live site:** [haydenp0130.github.io/pyn-visuals-site](https://haydenp0130.github.io/pyn-visuals-site/)  
+**Live site:** [pynvisuals.com](https://pynvisuals.com/)  
 **Repository:** [Haydenp0130/pyn-visuals-site](https://github.com/Haydenp0130/pyn-visuals-site)
 
 ### Brand voice

@@ -49,7 +49,7 @@ Any static host works. Upload the whole folder:
 - **GitHub Pages:** push this folder to a repo (GitHub Desktop works), then Settings → Pages → deploy from branch.
 - **Cloudflare Pages / Vercel:** "static site", no build command, output folder = root.
 
-**Live site:** https://haydenp0130.github.io/pyn-visuals-site/ (GitHub Pages, from the `main` branch of
+**Live site:** https://pynvisuals.com/ (GitHub Pages, from the `main` branch of
 https://github.com/Haydenp0130/pyn-visuals-site). To update it: commit and push in GitHub Desktop.
 
 If you move to a custom domain, update `og:url` and `og:image` in the `<head>` of each page to the new address
