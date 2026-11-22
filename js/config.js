@@ -56,6 +56,43 @@ window.PYN = {
   },
 
   /* ---------------------------------------------------------------------
+     REVIEW FORM CONNECTION
+     The "Leave a review" form (reviews.html) emails each review to you.
+     Leave endpoint "" to use the same Formspree form as inquiries
+     (reviews arrive with the subject "New review: …"). Nothing is
+     posted on the site automatically — see REVIEWS below.
+     --------------------------------------------------------------------- */
+  reviewForm: {
+    endpoint: "",
+  },
+
+  /* ---------------------------------------------------------------------
+     REVIEWS (shown in the scrolling panel on Home and the Reviews page)
+     When a review you want to show arrives by email, copy it in here.
+     Only add reviews where the person ticked "OK to show on the site".
+     Newest first. Fields:
+       name:    as they want it shown, e.g. "Jordan M."
+       org:     team, club, school, or business ("" to leave out)
+       project: what you shot, e.g. "Lacrosse game coverage" ("" to leave out)
+       rating:  1 to 5
+       date:    "YYYY-MM" (shown as "Nov 2026")
+       text:    the review itself
+
+     Example (copy, paste between the [ ], and fill in):
+       {
+         name: "Jordan M.",
+         org: "Tri-Cities Lacrosse Club",
+         project: "Tournament or event coverage",
+         rating: 5,
+         date: "2026-11",
+         text: "Paste their review here.",
+       },
+     While this list is empty, the panel invites visitors to leave the first review.
+     --------------------------------------------------------------------- */
+  reviews: [
+  ],
+
+  /* ---------------------------------------------------------------------
      HOME HERO
      image: shown immediately (keep it a compressed JPG/WebP ~300–600 KB).
      video: optional short, muted background loop (MP4, ideally < 8 MB).

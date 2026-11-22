@@ -13,6 +13,7 @@
   const NAV = [
     { key: "portfolio", label: "Work", href: "portfolio.html" },
     { key: "services", label: "Services", href: "services.html" },
+    { key: "reviews", label: "Reviews", href: "reviews.html" },
     { key: "about", label: "About", href: "about.html" },
     { key: "contact", label: "Contact", href: "contact.html" },
   ];

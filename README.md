@@ -9,12 +9,14 @@ pyn-visuals-site/
 ├─ services.html       Service details, how booking works, pricing note
 ├─ about.html          About Pyn Visuals
 ├─ contact.html        Booking inquiry form + direct contact
+├─ reviews.html        Reviews panel + "Leave a review" form
 ├─ css/styles.css      All styling (colors, fonts, spacing at the top)
 ├─ js/config.js        ★ CONTENT: contact info, logo, form, hero, services, portfolio
 ├─ js/components.js    Shared header + footer (built from config.js)
 ├─ js/gallery.js       Work cards, filters, lightbox
 ├─ js/main.js          Hero video, services lists, scroll reveal
 ├─ js/inquiry-form.js  Form validation + sending
+├─ js/reviews.js       Scrolling reviews panel + review form
 ├─ assets/
 │  ├─ brand/           Logo (ink-black PV mark + original file)
 │  ├─ images/hero/     hero.jpg  (placeholder)
@@ -68,6 +70,15 @@ your phone and Instagram instead. When you preview locally you'll also see a "Se
 
 The form sends these fields: `name`, `email`, `phone`, `organization`, `projectType`, `dateStart`, `dateEnd`, `location`, `details`, plus `_subject` and a spam trap called `_gotcha` (Formspree understands both).
 The success message only appears when the service actually confirms the message was received.
+
+## Reviews
+
+The home page and `reviews.html` show a scrolling panel of reviews, and `reviews.html` has a "Leave a review" form.
+
+- **Nothing posts automatically.** Each submitted review is emailed to you through Formspree (the same form as inquiries, subject "New review: …"). The email says whether the person agreed to have it shown on the site.
+- **To publish one:** copy it into the `reviews` list in `js/config.js` (the format is explained there), then commit and push. Newest first.
+- While the list is empty, the panel shows a "Be the first to leave a review" card.
+- To send reviews to a separate Formspree form, set `reviewForm.endpoint` in `js/config.js`.
 
 ## Adding and replacing work
 

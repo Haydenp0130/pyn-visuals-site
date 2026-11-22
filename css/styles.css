@@ -489,6 +489,66 @@ select.input {
 .contact-card .disclaimer { margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid var(--line-ink); color: var(--on-ink-muted); font-size: 0.9375rem; }
 @media (max-width: 960px) { .contact-card { position: static; } }
 
+/* ---------- Reviews panel ---------- */
+.reviews-controls { display: flex; gap: 0.5rem; }
+.reviews-controls[hidden] { display: none; }
+.reviews-nav {
+  width: 48px; height: 48px; display: inline-grid; place-items: center;
+  background: transparent; border: 1px solid var(--line); border-radius: var(--radius);
+  cursor: pointer; font-size: 1.1rem; transition: border-color 0.2s var(--ease), opacity 0.2s;
+}
+.reviews-nav:hover:not([disabled]) { border-color: var(--ink); }
+.reviews-nav[disabled] { opacity: 0.35; cursor: default; }
+.reviews-head__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.75rem; }
+
+.reviews-track {
+  list-style: none; display: flex; gap: clamp(1rem, 2vw, 1.5rem);
+  overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+  padding-bottom: 1.25rem; scrollbar-width: thin; scrollbar-color: var(--gray-500) transparent;
+}
+.reviews-track::-webkit-scrollbar { height: 6px; }
+.reviews-track::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
+.reviews-track:hover::-webkit-scrollbar-thumb { background: var(--gray-500); }
+.reviews-track:focus-visible { outline-offset: 6px; }
+
+.review-card {
+  flex: 0 0 min(400px, 84%); scroll-snap-align: start;
+  display: flex; flex-direction: column; gap: 1.1rem;
+  padding: clamp(1.5rem, 3vw, 2rem); background: #fbfaf8; border: 1px solid var(--line);
+}
+.review-card__top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 1.1rem; }
+.review-card__date { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-500); margin-left: auto; }
+.review-card__stars { font-size: 1.05rem; letter-spacing: 0.12em; color: var(--ink); line-height: 1; }
+.review-card__stars-off { color: var(--line); }
+.review-card__text { margin: 0; font-size: 1.075rem; line-height: 1.55; color: var(--gray-700); flex: 1; }
+.review-card__text p::before { content: "\201C"; }
+.review-card__text p::after { content: "\201D"; }
+.review-card__foot { padding-top: 1rem; border-top: 1px solid var(--line); }
+.review-card__name { font-weight: 700; }
+.review-card__meta { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-500); margin-top: 0.2rem; }
+.review-card--empty { flex-basis: min(520px, 100%); border-style: dashed; align-items: flex-start; }
+.review-card--empty .review-card__text { color: var(--ink); font-size: 1.2rem; font-weight: 500; }
+.review-card--empty .review-card__text::before, .review-card--empty .review-card__text::after { content: none; }
+.reviews-track--empty { overflow: visible; padding-bottom: 0; }
+
+/* ---------- Leave-a-review form ---------- */
+.review-form-wrap { max-width: 860px; }
+.rating { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 0.25rem; border-radius: var(--radius); }
+.rating input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+.rating label {
+  font-size: 2.1rem; line-height: 1; padding: 0.2rem 0.15rem; cursor: pointer;
+  color: #bfbab1; letter-spacing: 0; text-transform: none; transition: color 0.15s, transform 0.15s var(--ease);
+}
+.rating input:checked ~ label,
+.rating label:hover, .rating label:hover ~ label { color: var(--ink); }
+.rating:hover input:checked ~ label:not(:hover):not(:hover ~ label) { color: #bfbab1; }
+.rating input:focus-visible + label { outline: 2px solid var(--ink); outline-offset: 2px; }
+.rating[aria-invalid="true"] { box-shadow: 0 0 0 1px var(--error); }
+.rating-caption { font-size: 0.875rem; color: var(--gray-500); }
+.check { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 0.9375rem; color: var(--gray-700); cursor: pointer; }
+.check input { width: 20px; height: 20px; margin: 0.15rem 0 0; accent-color: var(--ink); flex: none; }
+.char-count { font-family: var(--font-mono); font-size: 0.75rem; color: var(--gray-500); justify-self: end; }
+
 /* ---------- Footer ---------- */
 .site-footer { background: var(--ink); color: var(--on-ink); border-top: 1px solid var(--line-ink); }
 .site-footer__top { display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(2, minmax(0, 1fr)); gap: 2.5rem; padding-block: clamp(3.5rem, 7vw, 5.5rem); }
