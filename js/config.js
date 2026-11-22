@@ -101,7 +101,7 @@ window.PYN = {
     {
       name: "Taylor R.",
       org: "",
-      project: "Tournament or event coverage",
+      project: "Business promotional content",
       rating: 5,
       date: "2026-11",
       text: "The photos and videos made it easy to show what our business does in a polished, professional way.",
