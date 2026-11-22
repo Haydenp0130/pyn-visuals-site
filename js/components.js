@@ -115,7 +115,7 @@
               <ul>
                 <li><a href="tel:${esc(b.phoneHref)}">${esc(b.phoneDisplay)}</a></li>
                 <li><a href="${esc(b.instagramUrl)}" target="_blank" rel="noopener">Instagram ${esc(b.instagramHandle)}</a></li>
-                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="contact.html">Get a quote</a></li>
               </ul>
             </div>
           </div>
