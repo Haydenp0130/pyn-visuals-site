@@ -13,6 +13,7 @@
   const NAV = [
     { key: "portfolio", label: "Work", href: "portfolio.html" },
     { key: "services", label: "Services", href: "services.html" },
+    { key: "web-design", label: "Web Design", href: "web-design.html" },
     { key: "reviews", label: "Reviews", href: "reviews.html" },
     { key: "about", label: "About", href: "about.html" },
     { key: "contact", label: "Contact", href: "contact.html" },
@@ -84,7 +85,7 @@
         if (e.key === "Escape" && !menu.hidden) { setOpen(false); toggle.focus(); }
       });
       menu.addEventListener("click", (e) => { if (e.target.closest("a")) setOpen(false); });
-      window.matchMedia("(min-width: 861px)").addEventListener("change", (e) => { if (e.matches) setOpen(false); });
+      window.matchMedia("(min-width: 1121px)").addEventListener("change", (e) => { if (e.matches) setOpen(false); });
 
       const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
       onScroll();
@@ -100,7 +101,7 @@
           <div class="container site-footer__top">
             <div>
               <a class="brand" href="index.html" aria-label="${esc(b.name)}, home">${brandMarkup(false)}</a>
-              <p class="site-footer__blurb">Sports, lacrosse, and business photo + video. Based in ${esc(b.city)}, ${esc(b.stateLong)}. Serving the ${esc(b.region)} and available for travel.</p>
+              <p class="site-footer__blurb">Sports, lacrosse, and business photo + video, plus web design and marketing. Based in ${esc(b.city)}, ${esc(b.stateLong)}. Serving the ${esc(b.region)} and available for travel.</p>
             </div>
             <div>
               <h2>Site</h2>

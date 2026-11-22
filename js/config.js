@@ -144,6 +144,7 @@ window.PYN = {
     { value: "highlights", label: "Player or team highlights" },
     { value: "business-promo", label: "Business promotional content" },
     { value: "social-video", label: "Social media video" },
+    { value: "web-design", label: "Web design & marketing" },
     { value: "custom", label: "Custom photo / video project" },
     { value: "not-sure", label: "Not sure yet" },
   ],

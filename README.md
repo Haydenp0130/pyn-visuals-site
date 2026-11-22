@@ -7,6 +7,7 @@ pyn-visuals-site/
 ├─ index.html          Home (hero, intro, selected work, services, booking CTA)
 ├─ portfolio.html      Filterable gallery + photo/video lightbox
 ├─ services.html       Service details, how booking works, pricing note
+├─ web-design.html     Web design & marketing (its own tab, separate from photo/video services)
 ├─ about.html          About Pyn Visuals
 ├─ contact.html        Booking inquiry form + direct contact
 ├─ reviews.html        Reviews panel + "Leave a review" form
@@ -119,7 +120,7 @@ Remaining placeholders (clearly labeled) and how to replace them:
 | Services, descriptions, "good fit for" lists | `services` in `js/config.js` |
 | Project types in the form | `projectTypes` in `js/config.js` |
 | Portfolio filters | `portfolioFilters` in `js/config.js` |
-| Hero headline, home intro, booking steps, about text | Directly in `index.html`, `services.html`, `about.html` |
+| Hero headline, home intro, booking steps, about text | Directly in `index.html`, `services.html`, `web-design.html`, `about.html` |
 | Page titles, descriptions, share text | `<title>` and `<meta>` tags at the top of each `.html` file |
 | Colors / fonts | Top of `css/styles.css` (`:root`) |
 
