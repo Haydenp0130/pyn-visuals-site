@@ -1,5 +1,5 @@
 /* =========================================================================
-   BOOKING INQUIRY FORM
+   CONTACT / INQUIRY FORM
    -------------------------------------------------------------------------
    IMPORTANT: This is a static site with no backend. The form can only
    deliver messages once a form service endpoint is set in js/config.js
@@ -109,7 +109,7 @@
     const dates = [f.dateStart.value, f.dateEnd.value].filter(Boolean).join(" to ") || "Not set";
     const opt = (label, v) => (v.trim() ? `${label}: ${v.trim()}` : null);
     return [
-      `Booking inquiry for ${b.name}`,
+      `New inquiry for ${b.name}`,
       opt("Name", f.name.value),
       opt("Email", f.email.value),
       opt("Phone", f.phone.value),

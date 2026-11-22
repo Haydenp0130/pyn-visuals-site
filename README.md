@@ -10,7 +10,7 @@ pyn-visuals-site/
 ├─ web-design.html     Web design & marketing (its own tab, separate from photo/video services)
 ├─ examples/          Concept websites shown in the Web Design carousel (fictional businesses, noindex)
 ├─ about.html          About Pyn Visuals
-├─ contact.html        Booking inquiry form + direct contact
+├─ contact.html        Contact form (photo/video and web design) + direct contact
 ├─ reviews.html        Reviews panel + "Leave a review" form
 ├─ css/styles.css      All styling (colors, fonts, spacing at the top)
 ├─ js/config.js        ★ CONTENT: contact info, logo, form, hero, services, portfolio
