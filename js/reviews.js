@@ -26,6 +26,40 @@
     return `<p class="review-card__stars" role="img" aria-label="${r} out of 5 stars">${"★".repeat(r)}<span class="review-card__stars-off">${"★".repeat(5 - r)}</span></p>`;
   };
 
+  /* ---------- Site-wide band ----------
+     Pages without their own panel (Work, Services, About, Contact) get a
+     reviews band just above the footer, once there's at least one review. */
+  const footer = document.querySelector("site-footer");
+  if (footer && reviews.length && !document.querySelector("[data-reviews-panel]")) {
+    const rated = reviews.filter((r) => Number(r.rating) > 0);
+    const avg = rated.length ? rated.reduce((s, r) => s + Number(r.rating), 0) / rated.length : 0;
+    const summary = avg
+      ? `<p class="reviews-summary"><span aria-hidden="true">★</span> ${avg.toFixed(1)} average from ${reviews.length} review${reviews.length === 1 ? "" : "s"}</p>`
+      : "";
+    footer.insertAdjacentHTML(
+      "beforebegin",
+      `<section class="section tone-2 reviews-band" aria-labelledby="band-reviews-title">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <p class="eyebrow">Reviews</p>
+              <h2 class="display h2" id="band-reviews-title">Word from<br />the sideline</h2>
+              ${summary}
+            </div>
+            <div class="reviews-head__actions">
+              <a class="link-arrow" href="reviews.html">All reviews <span class="arrow" aria-hidden="true">&rarr;</span></a>
+              <div class="reviews-controls" data-reviews-controls="band-reviews-panel">
+                <button class="reviews-nav" type="button" data-prev aria-label="Previous reviews">&larr;</button>
+                <button class="reviews-nav" type="button" data-next aria-label="Next reviews">&rarr;</button>
+              </div>
+            </div>
+          </div>
+          <div id="band-reviews-panel" data-reviews-panel></div>
+        </div>
+      </section>`
+    );
+  }
+
   /* ---------- Panel ---------- */
   document.querySelectorAll("[data-reviews-panel]").forEach((panel) => {
     const formHref = panel.dataset.formHref || "reviews.html#leave-review";

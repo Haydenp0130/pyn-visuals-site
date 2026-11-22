@@ -609,3 +609,7 @@ select.input {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+/* ---------- Reviews band (every page, above the footer) ---------- */
+.reviews-summary { margin-top: 1.25rem; font-family: var(--font-mono); font-size: 0.8125rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gray-700); }
+.reviews-summary span { color: var(--ink); }

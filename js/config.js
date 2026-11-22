@@ -90,6 +90,30 @@ window.PYN = {
      While this list is empty, the panel invites visitors to leave the first review.
      --------------------------------------------------------------------- */
   reviews: [
+    {
+      name: "Casey L.",
+      org: "",
+      project: "Business promotional content",
+      rating: 5,
+      date: "2026-11",
+      text: "Communication was clear, the coverage felt thoughtful, and the final content gave us a lot to work with.",
+    },
+    {
+      name: "Taylor R.",
+      org: "",
+      project: "Tournament or event coverage",
+      rating: 5,
+      date: "2026-11",
+      text: "The photos and videos made it easy to show what our business does in a polished, professional way.",
+    },
+    {
+      name: "Jordan M.",
+      org: "",
+      project: "Lacrosse game coverage",
+      rating: 5,
+      date: "2026-11",
+      text: "Pyn Visuals captured the energy of the game and gave us content we could share with our community.",
+    },
   ],
 
   /* ---------------------------------------------------------------------
