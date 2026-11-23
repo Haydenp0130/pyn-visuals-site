@@ -159,9 +159,8 @@ window.PYN = {
        editMinutes: included minor content edits per month
        compare: what shows in each row of the comparison table
                 ("" shows a dash = not included in that package)
-     ⚠ OWNER APPROVAL: the Premium "Contact forms" cell and the
-       Subscription cells marked with a dash were filled in from each
-       package's listed features only. Confirm before publishing.
+     Comparison cells, extras wording and FAQ policy confirmed by the
+     owner on 2026-11-22.
      --------------------------------------------------------------------- */
   webDesign: {
     hourlyRate: 40, // additional updates and development, per hour
