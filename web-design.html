@@ -3,15 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Web Design &amp; Marketing | Pyn Visuals</title>
-  <meta name="description" content="Custom websites and marketing for businesses, teams, and athletes, designed and built by Pyn Visuals in Kennewick, WA. Serving the Tri-Cities. Inquire for a custom quote." />
+  <title>Affordable Website Design in Kennewick &amp; the Tri-Cities | Pyn Visuals</title>
+  <meta name="description" content="Modern, mobile-friendly websites for small businesses in Kennewick, Richland and Pasco. Clear upfront pricing, simple monthly management, and design from a local creative studio." />
+  <link rel="canonical" href="https://pynvisuals.com/web-design.html" />
   <meta name="theme-color" content="#f4f2ee" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <meta property="og:site_name" content="Pyn Visuals" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Web Design &amp; Marketing | Pyn Visuals" />
-  <meta property="og:description" content="Custom websites and marketing, with photo and video shot in-house. Inquire for a custom quote." />
+  <meta property="og:title" content="Web Design &amp; Management | Pyn Visuals" />
+  <meta property="og:description" content="Professional websites without the agency price tag. Affordable upfront pricing and simple monthly management for Tri-Cities small businesses." />
   <meta property="og:url" content="https://pynvisuals.com/web-design.html" />
   <meta property="og:image" content="https://pynvisuals.com/assets/social/og-image.jpg" />
   <meta property="og:image:alt" content="Pyn Visuals logo and name on a warm white background." />
@@ -24,6 +25,7 @@
   <script src="js/config.js" defer></script>
   <script src="js/components.js" defer></script>
   <script src="js/reviews.js" defer></script>
+  <script src="js/web-pricing.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/examples.js" defer></script>
 </head>
@@ -32,13 +34,72 @@
   <noscript><nav class="container" aria-label="Main"><p><a href="index.html">Home</a> · <a href="portfolio.html">Work</a> · <a href="services.html">Services</a> · <a href="web-design.html">Web Design</a> · <a href="reviews.html">Reviews</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p></nav></noscript>
 
   <main id="main">
-    <header class="container page-intro">
-      <p class="eyebrow">Web design &amp; marketing</p>
-      <div class="page-intro__row">
-        <h1 class="display">Built to be seen</h1>
-        <p class="lede">Custom websites and marketing for businesses, teams, and athletes. Designed, built, and filled with photo and video shot in-house, so everything looks like it belongs together.</p>
+    <header class="container page-intro wd-hero">
+      <p class="eyebrow">Web design &amp; management</p>
+      <h1 class="display wd-hero__title">Professional websites.<br />Without the agency price tag.</h1>
+      <div class="wd-hero__row">
+        <div>
+          <p class="lede">Modern, mobile-friendly websites designed for small businesses. Affordable upfront pricing, straightforward monthly management, and a website built to represent your business professionally.</p>
+          <div class="cta__row">
+            <a class="btn" href="contact.html?type=web-design">Get Started</a>
+            <a class="link-arrow" href="#pricing">View Pricing <span class="arrow" aria-hidden="true">&darr;</span></a>
+          </div>
+        </div>
+        <dl class="wd-facts">
+          <div><dt>Websites from</dt><dd><span data-wd-text="from-upfront">$199</span> upfront</dd></div>
+          <div><dt>Management from</dt><dd><span data-wd-text="from-monthly">$29</span>/month</dd></div>
+          <div><dt>Or no build fee</dt><dd><span data-wd-text="sub-monthly">$79</span>/month</dd></div>
+          <div><dt>Serving</dt><dd>Kennewick, Richland &amp; Pasco</dd></div>
+        </dl>
       </div>
     </header>
+
+    <!-- PACKAGES — every price comes from js/config.js (webDesign) via js/web-pricing.js -->
+    <section class="section tone-2" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <p class="eyebrow">Pricing</p>
+            <h2 class="display h2" id="pricing-title">Three packages.<br />One clear price.</h2>
+          </div>
+          <p class="lede">Each package is a one-time build fee plus a monthly plan for hosting, maintenance and small edits. No surprise invoices.</p>
+        </div>
+        <ul class="wd-cards" data-wd-packages></ul>
+        <noscript><p class="notice" style="display:block">Pricing needs JavaScript to display. Call or text <a href="tel:+15095727469">509-572-7469</a> for package details.</p></noscript>
+
+        <div class="wd-extras" data-reveal>
+          <p class="wd-extras__rate"><strong>Additional website updates and development: <span data-wd-text="hourly">$40</span>/hour</strong>, with your approval before any work begins.</p>
+          <ul class="wd-extras__list" data-wd-extras></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SUBSCRIPTION: an alternative to the packages above, not an add-on -->
+    <section class="section dark wd-sub" aria-labelledby="sub-title">
+      <div class="container wd-sub__grid">
+        <div data-reveal>
+          <p class="eyebrow">Subscription</p>
+          <h2 class="display h2" id="sub-title" style="margin-top:1rem">Prefer no<br />upfront cost?</h2>
+          <p class="lede" style="margin-top:1.25rem">Get a professional website for <span data-wd-text="sub-monthly">$79</span>/month with no initial build fee and a <span data-wd-text="sub-term">12</span>-month agreement. It's an alternative to the packages above, not an extra charge on top of them.</p>
+        </div>
+        <div class="wd-sub__card" data-wd-sub data-reveal></div>
+      </div>
+    </section>
+
+    <!-- COMPARISON -->
+    <section class="section" aria-labelledby="compare-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <p class="eyebrow">Compare</p>
+            <h2 class="display h2" id="compare-title">Side by side</h2>
+          </div>
+          <p class="lede">What's included in each option. A dash means it isn't included in that plan.</p>
+        </div>
+        <div class="wd-compare" data-wd-compare data-reveal></div>
+        <p class="wd-compare__note" data-wd-compare-note data-reveal></p>
+      </div>
+    </section>
 
     <!-- EXAMPLE: this site -->
     <section class="section tone-2" aria-labelledby="example-title">
@@ -200,10 +261,10 @@
       <div class="container">
         <div class="section-head" data-reveal>
           <div>
-            <p class="eyebrow">What's included</p>
+            <p class="eyebrow">Beyond the website</p>
             <h2 class="display h2" id="offer-title">Site, content,<br />and the push</h2>
           </div>
-          <p class="lede">Pick what you need. Every project is scoped and quoted individually.</p>
+          <p class="lede">The packages cover the website itself. Because Pyn Visuals is also a photo and video studio, you can add real photos, video and launch content, quoted separately.</p>
         </div>
         <ul class="service-rows">
           <li class="service-row" data-reveal>
@@ -252,23 +313,67 @@
           </div>
         </div>
         <ol class="steps" data-reveal>
-          <li><h3>Send an inquiry</h3><p>Tell us about your business and what you want the site or campaign to do.</p></li>
-          <li><h3>Plan it together</h3><p>We'll go over pages, content, and the look, then send a custom quote.</p></li>
+          <li><h3>Pick a package</h3><p>Choose the option that fits, or send an inquiry and ask which one makes sense.</p></li>
+          <li><h3>Plan it together</h3><p>We'll go over pages, content and the look, and confirm the scope and timeline in writing before work starts.</p></li>
           <li><h3>Shoot, design, build</h3><p>Photos and video get captured, and the site comes together with your feedback along the way.</p></li>
           <li><h3>Launch and promote</h3><p>The site goes live, with content ready to announce it.</p></li>
         </ol>
       </div>
     </section>
 
-    <!-- PRICING -->
-    <section class="section" aria-labelledby="quote-title">
+    <!-- FAQ
+         ⚠ OWNER APPROVAL: the "Do I own my website?" and "Can I cancel?"
+         answers deliberately point to the written agreement instead of
+         stating terms. Replace them with your final policy once decided. -->
+    <section class="section" aria-labelledby="faq-title">
       <div class="container grid-12">
-        <div class="intro__label"><h2 class="eyebrow" id="quote-title">Pricing</h2></div>
-        <div class="intro__body" data-reveal>
-          <p class="statement">Every project gets its own quote. <span class="muted">The number of pages, the content needed, and ongoing marketing all shape what fits best.</span></p>
-          <div class="cta__row">
-            <a class="btn" href="contact.html?type=web-design">Start a Website</a>
-            <a class="link-arrow" data-link="phone" data-keep-text="1" href="tel:+15095727469">Or call / text 509-572-7469 <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        <div class="intro__label"><p class="eyebrow">FAQ</p></div>
+        <div class="intro__body">
+          <h2 class="display h2" id="faq-title" data-reveal>Good questions</h2>
+          <div class="wd-faq" data-reveal>
+            <details>
+              <summary>Are there any hidden fees?</summary>
+              <p>No. Package prices cover the listed scope plus standard hosting and maintenance. Domain registration, paid third-party services and any additional work are separate, and they're always disclosed up front.</p>
+            </details>
+            <details>
+              <summary>Do I own my website?</summary>
+              <p>Ownership, delivery of the site files, and transfer terms are set out in your written agreement before any work begins. Ask and we'll walk you through them for your package.</p>
+            </details>
+            <details>
+              <summary>Can I update my website?</summary>
+              <p>Yes. Every monthly plan includes a set amount of minor content edits, like new hours, prices, photos or text changes. Larger changes beyond that allowance are available at <span data-wd-text="hourly">$40</span>/hour, and only with your approval first.</p>
+            </details>
+            <details>
+              <summary>What if I need more pages?</summary>
+              <p>Bigger projects are welcome. If you need more pages than a package includes, or features like online ordering, you'll get a custom quote before anything starts.</p>
+            </details>
+            <details>
+              <summary>Can you redesign an existing website?</summary>
+              <p>Yes. We'll review your current site first, then agree on the scope together before quoting the redesign.</p>
+            </details>
+            <details>
+              <summary>How long does it take to build a website?</summary>
+              <p>It depends on how ready your content is (text, photos, logo) and how complex the site is. You'll get a timeline for your project before work begins.</p>
+            </details>
+            <details>
+              <summary>Can I cancel monthly management?</summary>
+              <p>Ongoing management plans and the <span data-wd-text="sub-term">12</span>-month subscription work differently, and the cancellation terms for each are spelled out in your written agreement before you sign. Ask anytime if you'd like to see them first.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="dark cta" aria-labelledby="wd-cta-title">
+      <div class="container" data-reveal>
+        <p class="eyebrow">Get started</p>
+        <h2 class="display h2 cta__title" id="wd-cta-title" style="margin-top:1rem">Ready for a site that looks the part?</h2>
+        <div class="cta__row">
+          <a class="btn btn--light" href="contact.html?type=web-design">Get Started</a>
+          <div class="cta__contact mono">
+            <a data-link="phone" data-keep-text="1" href="tel:+15095727469">Call / text 509-572-7469</a>
+            <a href="#pricing">Back to pricing</a>
           </div>
         </div>
       </div>

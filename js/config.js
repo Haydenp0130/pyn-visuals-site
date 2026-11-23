@@ -150,6 +150,129 @@ window.PYN = {
   ],
 
   /* ---------------------------------------------------------------------
+     WEB DESIGN PRICING  ★ change prices here, nowhere else
+     Everything on web-design.html (cards, subscription, comparison table,
+     extras, FAQ prices, search-engine data) and the package menu on the
+     contact form is built from this block.
+       upfront / monthly: numbers in dollars
+       startingAt: true shows "Starting at" before the upfront price
+       editMinutes: included minor content edits per month
+       compare: what shows in each row of the comparison table
+                ("" shows a dash = not included in that package)
+     ⚠ OWNER APPROVAL: the Premium "Contact forms" cell and the
+       Subscription cells marked with a dash were filled in from each
+       package's listed features only. Confirm before publishing.
+     --------------------------------------------------------------------- */
+  webDesign: {
+    hourlyRate: 40, // additional updates and development, per hour
+    packages: [
+      {
+        id: "starter",
+        name: "Starter",
+        upfront: 199,
+        monthly: 29,
+        editMinutes: 15,
+        summary: "For businesses that need a professional online presence.",
+        features: [
+          "1-page responsive website",
+          "Clean, professional design",
+          "Mobile optimization",
+          "Business and contact information",
+          "Basic contact form",
+          "Basic SEO setup",
+          "Standard hosting and maintenance",
+          "Up to 15 minutes of minor content edits per month",
+        ],
+        cta: "Get Started",
+        compare: { pages: "1 page", responsive: "Mobile optimized", forms: "Basic contact form", galleries: "", seo: "Basic setup", booking: "", analytics: "", hosting: "Standard", maintenance: "Standard", edits: "15 min / month" },
+      },
+      {
+        id: "business",
+        name: "Business",
+        upfront: 399,
+        monthly: 49,
+        editMinutes: 30,
+        featured: true, // shows "Most popular"
+        summary: "For small businesses ready to establish a stronger online presence.",
+        features: [
+          "Up to 4 pages",
+          "Customized modern design",
+          "Mobile and desktop optimization",
+          "Dedicated service information",
+          "Photo gallery",
+          "Inquiry form",
+          "Links to existing booking services when applicable",
+          "Basic local SEO",
+          "Standard hosting and maintenance",
+          "Up to 30 minutes of minor content edits per month",
+        ],
+        cta: "Choose Business",
+        compare: { pages: "Up to 4", responsive: "Mobile + desktop", forms: "Inquiry form", galleries: "Photo gallery", seo: "Basic local SEO", booking: "Links to your booking service", analytics: "", hosting: "Standard", maintenance: "Standard", edits: "30 min / month" },
+      },
+      {
+        id: "premium",
+        name: "Premium",
+        upfront: 799,
+        startingAt: true,
+        monthly: 89,
+        editMinutes: 60,
+        summary: "For businesses needing a more customized website experience.",
+        features: [
+          "Up to 7 pages",
+          "More advanced custom design",
+          "Premium visual layouts",
+          "Galleries and subtle animations",
+          "Existing booking service integrations where supported",
+          "Basic SEO and analytics setup",
+          "Standard hosting and maintenance",
+          "Up to 60 minutes of minor updates per month",
+        ],
+        cta: "Request a Quote",
+        note: "Complex projects are quoted separately.",
+        compare: { pages: "Up to 7", responsive: "Mobile + desktop", forms: "Inquiry form", galleries: "Galleries + animations", seo: "Basic setup", booking: "Integrations where supported", analytics: "Basic setup", hosting: "Standard", maintenance: "Standard", edits: "60 min / month" },
+      },
+    ],
+    subscription: {
+      id: "subscription",
+      name: "Subscription",
+      upfront: 0,
+      monthly: 79,
+      termMonths: 12,
+      summary: "Professional website with no upfront build fee.",
+      features: [
+        "Up to 4 pages",
+        "Mobile-friendly design",
+        "Standard hosting",
+        "Routine maintenance",
+        "Limited content updates",
+        "12-month minimum agreement",
+      ],
+      cta: "Ask About Subscription",
+      compare: { pages: "Up to 4", responsive: "Mobile-friendly", forms: "", galleries: "", seo: "", booking: "", analytics: "", hosting: "Standard", maintenance: "Routine", edits: "Limited updates" },
+    },
+    compareRows: [
+      { key: "pages", label: "Pages" },
+      { key: "responsive", label: "Responsive design" },
+      { key: "forms", label: "Contact forms" },
+      { key: "galleries", label: "Galleries" },
+      { key: "seo", label: "SEO setup" },
+      { key: "booking", label: "Booking integrations" },
+      { key: "analytics", label: "Analytics" },
+      { key: "hosting", label: "Hosting" },
+      { key: "maintenance", label: "Maintenance" },
+      { key: "edits", label: "Included edit time" },
+    ],
+    compareNote: "Booking integrations connect to a booking service you already use. That service's own fees stay separate.",
+    extras: [
+      "Domain registration and renewals are separate.",
+      "Paid third-party tools (booking apps, email, plugins) are billed by those providers.",
+      "Online stores and custom software are quoted separately.",
+      "Major redesigns are outside routine monthly maintenance.",
+      "Website writing and photography can be quoted separately when needed.",
+    ],
+  },
+
+  /* ---------------------------------------------------------------------
      SERVICES
      `projectType` pre-selects that option when someone clicks
      "Inquire about this" on the Services page.

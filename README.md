@@ -119,6 +119,7 @@ Remaining placeholders (clearly labeled) and how to replace them:
 |---|---|
 | Phone, Instagram, city, region | `business` in `js/config.js` (header, footer, and contact links update automatically). Also update the matching text in a few hard-coded lines in the HTML (search for `509-572-7469`) and the `telephone` in the `<script type="application/ld+json">` block in `index.html`. |
 | Services, descriptions, "good fit for" lists | `services` in `js/config.js` |
+| **Web design prices, package features, comparison table, extras, hourly rate** | `webDesign` in `js/config.js`. Every price on the Web Design page, the Home and Services links, and the package menu on the contact form update from there. |
 | Project types in the form | `projectTypes` in `js/config.js` |
 | Portfolio filters | `portfolioFilters` in `js/config.js` |
 | Hero headline, home intro, booking steps, about text | Directly in `index.html`, `services.html`, `web-design.html`, `about.html` |
