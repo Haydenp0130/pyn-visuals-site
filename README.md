@@ -7,10 +7,8 @@ pyn-visuals-site/
 ├─ index.html          Home (hero, intro, selected work, services, booking CTA)
 ├─ portfolio.html      Filterable gallery + photo/video lightbox
 ├─ services.html       Service details, how booking works, pricing note
-├─ web-design.html     Web design & marketing (its own tab, separate from photo/video services)
-├─ examples/          Concept websites shown in the Web Design carousel (fictional businesses, noindex)
 ├─ about.html          About Pyn Visuals
-├─ contact.html        Contact form (photo/video and web design) + direct contact
+├─ contact.html        Contact form (photo/video) + direct contact
 ├─ reviews.html        Reviews panel + "Leave a review" form
 ├─ css/styles.css      All styling (colors, fonts, spacing at the top)
 ├─ js/config.js        ★ CONTENT: contact info, logo, form, hero, services, portfolio
@@ -122,7 +120,7 @@ Remaining placeholders (clearly labeled) and how to replace them:
 | **Web design prices, package features, comparison table, extras, hourly rate** | `webDesign` in `js/config.js`. Every price on the Web Design page, the Home and Services links, and the package menu on the contact form update from there. |
 | Project types in the form | `projectTypes` in `js/config.js` |
 | Portfolio filters | `portfolioFilters` in `js/config.js` |
-| Hero headline, home intro, booking steps, about text | Directly in `index.html`, `services.html`, `web-design.html`, `about.html` |
+| Hero headline, home intro, booking steps, about text | Directly in `index.html`, `services.html`, `about.html` |
 | Page titles, descriptions, share text | `<title>` and `<meta>` tags at the top of each `.html` file |
 | Colors / fonts | Top of `css/styles.css` (`:root`) |
 
