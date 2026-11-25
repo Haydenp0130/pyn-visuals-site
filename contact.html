@@ -4,14 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Get a Quote | Pyn Visuals</title>
-  <meta name="description" content="Contact Pyn Visuals about sports, lacrosse, business, or custom photo and video projects, or web design and marketing, in Kennewick, the Tri-Cities, or on location." />
+  <meta name="description" content="Contact Pyn Visuals about sports, lacrosse, business, or custom photo and video projects, in Kennewick, the Tri-Cities, or on location." />
   <meta name="theme-color" content="#f4f2ee" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <meta property="og:site_name" content="Pyn Visuals" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Get a Quote | Pyn Visuals" />
-  <meta property="og:description" content="Get in touch about sports, lacrosse, business, or custom photo and video projects, or web design and marketing." />
+  <meta property="og:description" content="Get in touch about sports, lacrosse, business, or custom photo and video projects." />
   <meta property="og:url" content="https://pynvisuals.com/contact.html" />
   <meta property="og:image" content="https://pynvisuals.com/assets/social/og-image.jpg" />
   <meta property="og:image:alt" content="Pyn Visuals logo and name on a warm white background." />
@@ -29,14 +29,14 @@
 </head>
 <body>
   <site-header current="contact"></site-header>
-  <noscript><nav class="container" aria-label="Main"><p><a href="index.html">Home</a> · <a href="portfolio.html">Work</a> · <a href="services.html">Services</a> · <a href="web-design.html">Web Design</a> · <a href="reviews.html">Reviews</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p></nav></noscript>
+  <noscript><nav class="container" aria-label="Main"><p><a href="index.html">Home</a> · <a href="portfolio.html">Work</a> · <a href="services.html">Services</a> · <a href="reviews.html">Reviews</a> · <a href="about.html">About</a> · <a href="contact.html">Contact</a></p></nav></noscript>
 
   <main id="main">
     <header class="container page-intro">
       <p class="eyebrow">Get in touch</p>
       <div class="page-intro__row">
         <h1 class="display">Get a quote</h1>
-        <p class="lede">Tell us about your game, event, website, or project. You'll hear back to talk through details, availability, and a custom quote.</p>
+        <p class="lede">Tell us about your game, event, or project. You'll hear back to talk through details, availability, and a custom quote.</p>
       </div>
     </header>
 
@@ -89,29 +89,15 @@
             <p class="field__error" id="project-type-error"></p>
           </div>
 
-          <!-- Web design only: shown when Project type is "Web design" (js/inquiry-form.js) -->
-          <div class="field" data-web-only hidden>
-            <label for="package">Website package <span class="req">(optional)</span></label>
-            <select class="input" id="package" name="package" aria-describedby="package-hint">
-              <option value="">Not sure yet</option>
-              <!-- options come from js/config.js (webDesign) -->
-            </select>
-            <p class="hint" id="package-hint"><a href="web-design.html#pricing">Compare packages</a></p>
-          </div>
 
-          <div class="field" data-web-only hidden>
-            <label for="website">Current website <span class="req">(optional)</span></label>
-            <input class="input" id="website" name="website" type="text" inputmode="url" autocomplete="url" placeholder="yourbusiness.com" aria-describedby="website-error" />
-            <p class="field__error" id="website-error"></p>
-          </div>
 
-          <div class="field" data-not-web>
+          <div class="field">
             <label for="location">Location <span class="req">(optional)</span></label>
             <input class="input" id="location" name="location" type="text" autocomplete="off" aria-describedby="location-hint" />
             <p class="hint" id="location-hint">City, venue, or field.</p>
           </div>
 
-          <fieldset class="field field--full" data-not-web style="border:0;margin:0;padding:0;min-width:0">
+          <fieldset class="field field--full" style="border:0;margin:0;padding:0;min-width:0">
             <legend>Project date or date range <span class="req">(optional)</span></legend>
             <p class="hint" id="date-hint" style="margin:0.5rem 0 0.75rem">Leave blank if you're not sure yet. For a single day, fill in the start date only.</p>
             <div class="date-range">
