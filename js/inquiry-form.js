@@ -36,33 +36,6 @@
   const preset = params.get("type");
   if (preset && site.projectTypes.some((t) => t.value === preset)) select.value = preset;
 
-  /* Web design: package menu from config, ?package=... preselect, and
-     web-only fields shown only when the project type is web design */
-  const pkgSelect = $("#package");
-  const wd = site.webDesign;
-  const plans = wd ? [...wd.packages, wd.subscription] : [];
-  const money = (n) => "$" + Number(n).toLocaleString("en-US");
-  const planLabel = (p) => `${p.name}: ${p.startingAt ? "from " : ""}${money(p.upfront)} upfront + ${money(p.monthly)}/month`;
-  if (pkgSelect) {
-    pkgSelect.insertAdjacentHTML("beforeend", plans.map((p) => `<option value="${site.esc(p.id)}">${site.esc(planLabel(p))}</option>`).join(""));
-    const pkgPreset = params.get("package");
-    if (pkgPreset && plans.some((p) => p.id === pkgPreset)) {
-      pkgSelect.value = pkgPreset;
-      select.value = "web-design";
-    }
-  }
-  const detailsHint = $("#details-hint");
-  const defaultHint = detailsHint ? detailsHint.textContent : "";
-  const isWeb = () => select.value === "web-design";
-  function syncWebFields() {
-    const web = isWeb();
-    form.querySelectorAll("[data-web-only]").forEach((el) => { el.hidden = !web; });
-    form.querySelectorAll("[data-not-web]").forEach((el) => { el.hidden = web; });
-    if (detailsHint) detailsHint.textContent = web ? "What does your business do, and what should the website help people do (call, book, visit, order)?" : defaultHint;
-  }
-  select.addEventListener("change", syncWebFields);
-  syncWebFields();
-
   /* Setup reminder for the site owner (only visible when previewing locally) */
   if (!endpoint && isLocal) $("[data-setup-notice]").hidden = false;
   if (!endpoint) console.warn("[Pyn Visuals] Inquiry form is not connected. Set PYN.inquiryForm.endpoint in js/config.js.");
@@ -82,12 +55,6 @@
     },
     details: (v) => (v.trim().length >= 20 ? "" : "Please add a few details about the project (at least 20 characters)."),
   };
-  if (form.elements.website) {
-    rules.website = (v) => {
-      const s = v.trim().replace(/^https?:\/\//i, "");
-      return !s || /^[^\s/]+\.[a-z]{2,}(\/\S*)?$/i.test(s) ? "" : "Please enter a web address like yourbusiness.com, or leave it blank.";
-    };
-  }
 
   function setError(input, msg) {
     const err = document.getElementById(`${input.id}-error`);
@@ -142,8 +109,6 @@
     const type = select.options[select.selectedIndex]?.text || "";
     const dates = [f.dateStart.value, f.dateEnd.value].filter(Boolean).join(" to ") || "Not set";
     const opt = (label, v) => (v.trim() ? `${label}: ${v.trim()}` : null);
-    const web = isWeb();
-    const pkg = pkgSelect ? pkgSelect.options[pkgSelect.selectedIndex]?.text || "" : "";
     return [
       `New inquiry for ${b.name}`,
       opt("Name", f.name.value),
@@ -151,8 +116,8 @@
       opt("Phone", f.phone.value),
       opt("Business", f.organization.value),
       `Project type: ${type}`,
-      web ? `Package: ${pkg}` : `Date(s): ${dates}`,
-      web ? opt("Current website", f.website.value) : opt("Location", f.location.value),
+      `Date(s): ${dates}`,
+      opt("Location", f.location.value),
       "",
       f.details.value.trim(),
     ].filter((l) => l !== null).join("\n");
@@ -246,14 +211,7 @@
     try {
       const data = new FormData(form);
       data.set("projectType", select.options[select.selectedIndex].text);
-      if (isWeb() && pkgSelect) {
-        data.set("package", pkgSelect.options[pkgSelect.selectedIndex].text);
-        data.delete("location"); data.delete("dateStart"); data.delete("dateEnd");
-      } else {
-        data.delete("package"); data.delete("website");
-      }
-      const pkgName = isWeb() && pkgSelect && pkgSelect.value ? ` · ${plans.find((p) => p.id === pkgSelect.value).name} package` : "";
-      data.set("_subject", `New inquiry: ${data.get("projectType")}${pkgName} (${data.get("name")})`);
+      data.set("_subject", `New inquiry: ${data.get("projectType")} (${data.get("name")})`);
       const res = await fetch(endpoint, { method: "POST", body: data, headers: { Accept: "application/json" } });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const name = form.elements.name.value.trim();
